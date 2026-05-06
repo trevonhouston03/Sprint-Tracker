@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SprintTracker</title>
+</head>
+<body>
+
+<h1>SprintTracker</h1>
+
+<input id="distance" placeholder="Distance">
+<input id="time" placeholder="Time">
+<button onclick="addWorkout()">Add Workout</button>
+
+<ul id="list"></ul>
+
+<script>
+async function addWorkout() {
+    const distance = document.getElementById("distance").value;
+    const time = document.getElementById("time").value;
+
+    if (!distance || !time) {
+        alert("Fill in both fields");
+        return;
+    }
+
+    await fetch("http://localhost:5000/api/workouts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ distance, time })
+    });
+
+    loadWorkouts();
+}
+
+async function loadWorkouts() {
+    const res = await fetch("http://localhost:5000/api/workouts");
+    const data = await res.json();
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    data.forEach(w => {
+        const li = document.createElement("li");
+        li.innerText = `${w.distance}m - ${w.time}s`;
+        list.appendChild(li);
+    });
+}
+
+loadWorkouts();
+</script>
+
+</body>
+</html>

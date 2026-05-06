@@ -1,0 +1,25 @@
+{
+  "name": "sprint-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack web application for athletes to log workouts, track performances, and visualize training progress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevonhouston03/Sprint-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/trevonhouston03/Sprint-Tracker/issues"
+  },
+  "homepage": "https://github.com/trevonhouston03/Sprint-Tracker#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
