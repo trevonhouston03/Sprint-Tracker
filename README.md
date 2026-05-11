@@ -36,7 +36,7 @@ Styling: CSS
 ## ⚡ Quick Start
 
 ### 1. Clone Project
-1. git clone <your-repo-url>
+1. git clone (https://github.com/trevonhouston03/Sprint-Tracker.git)
 2. cd SprintTracker
 
 ---
