@@ -42,9 +42,9 @@ cd SprintTracker
 ---
 
 ### 2. Start Backend
-cd server
-npm install
-node server.js
+1. cd server
+2. npm install
+3. node server.js
 
 Backend runs on:
 http://localhost:5000
@@ -52,9 +52,9 @@ http://localhost:5000
 ---
 
 ### 3. Start Frontend
-cd client
-npm install
-npm run dev
+1. cd client
+2. npm install
+3. npm run dev
 
 Frontend runs on:
 http://localhost:5173
